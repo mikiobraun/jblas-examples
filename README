@@ -9,12 +9,13 @@ COMPILING
 ---------
 
 You need to have a file called "jblas.jar" in the current
-directory. Download one of the prebuild jar files from jblas.org, then
+directory. Download one of the prebuild jar files from http://jblas.org, then
 link or copy to jblas.jar here.
 
 Compile with "ant".
 
-See the accompanying blog post at ...
+See the accompanying blog post at 
+http://blog.mikiobraun.de/2010/08/jblas-1-1-examples.html
 
 
 KERNEL RIDGE REGRESSION EXAMPLE
