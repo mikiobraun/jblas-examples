@@ -65,7 +65,8 @@ public class KRR {
      *
      */
     DoubleMatrix safeSinc(DoubleMatrix x) {
-	return sin(x).div(x.add(x.eq(0)));
+	DoubleMatrix xIsZero = x.eq(0);
+	return sin(x).div(x.add(xIsZero)).add(xIsZero);
     }
 
 
