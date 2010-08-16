@@ -1,0 +1,33 @@
+jblas-examples
+
+First version June 22, 2010
+
+This software is in the public domain. Do whatever you wish to do with it.
+
+
+COMPILING
+---------
+
+You need to have a file called "jblas.jar" in the current
+directory. Download one of the prebuild jar files from jblas.org, then
+link or copy to jblas.jar here.
+
+Compile with "ant".
+
+See the accompanying blog post at ...
+
+
+KERNEL RIDGE REGRESSION EXAMPLE
+-------------------------------
+
+Run with java -cp jblas.jar:jblas-examples.jar KRR 1 0.1
+
+"1" is the kernel width,
+"0.1" is the regularization constant lambda.
+
+
+CONJUGATE GRADIENTS EXAMPLE
+---------------------------
+
+Run with java -cp jblas.jar:jblas-examples.jar CG
+

@@ -1,0 +1,41 @@
+<project name="jblas-examples" default="dist" basedir=".">
+  <property name="src" location="src"/>
+  <property name="build" location="build"/>
+  <property name="doc" location="doc"/>
+
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build}"/>
+  </target>
+  
+  <target name="compile" depends="init"
+        description="compile the source " >
+    <!-- Compile the java code from ${src} into ${build} -->
+    <javac srcdir="${src}" destdir="${build}" classpath="jblas.jar"/>
+  </target>
+
+  <target name="dist" depends="compile"
+        description="generate the distribution" >
+    <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+    <jar jarfile="jblas-examples.jar" basedir="${build}"/>
+  </target>
+
+  <target name="clean"
+        description="clean up" >
+    <!-- Delete the ${build} and ${dist} directory trees -->
+    <delete dir="${build}"/>
+  </target>
+
+  <target name="javadoc"
+	  description="Generate javadoc" >
+    <mkdir dir="${doc}" />
+    
+    <javadoc destdir="${doc}" 
+	     classpath="jblas.jar"
+	     access="private">
+      <fileset dir="${src}" />
+    </javadoc>
+  </target>
+</project>
